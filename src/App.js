@@ -55,6 +55,11 @@ function App() {
     setCalc(value)
   }
 
+  const clearAll = () => {
+    setCalc('')
+    setResult('')
+  }
+
   return (
     <div className="App">
       <div className='calculator'>
@@ -70,6 +75,7 @@ function App() {
           <button onClick={ () => updateCalc('+') }>+</button>
           <button onClick={ () => updateCalc('-') }>-</button>
 
+          <button onClick={clearAll}>Clear</button>
           <button onClick={deleteLast}>DEL</button>
         </div>
 
